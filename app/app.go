@@ -63,8 +63,8 @@ func Start() {
 		Methods(http.MethodPost).
 		Name("NewTransaction")
 
-	//am := AuthMiddleware{domain.NewAuthRepository()}
-	//router.Use(am.authorizationHandler())
+	am := AuthMiddleware{domain.NewAuthRepository()}
+	router.Use(am.authorizationHandler())
 
 	// starting server
 	address := os.Getenv("SERVER_ADDRESS")

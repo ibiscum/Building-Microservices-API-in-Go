@@ -3,10 +3,11 @@ package service
 import (
 	"testing"
 
-	"github.com/golang/mock/gomock"
 	realdomain "github.com/ibiscum/Building-Microservices-API-in-Go/domain"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/mocks/domain"
+	"go.uber.org/mock/gomock"
 )
 
 func Test_should_return_a_validation_error_response_when_the_request_is_not_validated(t *testing.T) {

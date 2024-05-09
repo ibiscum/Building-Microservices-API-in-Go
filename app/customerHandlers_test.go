@@ -5,10 +5,11 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/golang/mock/gomock"
 	"github.com/gorilla/mux"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/mocks/service"
+	"go.uber.org/mock/gomock"
 )
 
 var router *mux.Router
@@ -33,8 +34,8 @@ func Test_should_return_customers_with_status_code_200(t *testing.T) {
 	defer teardown()
 
 	dummyCustomers := []dto.CustomerResponse{
-		{"1001", "Ashish", "New Delhi", "110011", "2000-01-01", "1"},
-		{"1002", "Rob", "New Delhi", "110011", "2000-01-01", "1"},
+		{Id: "1001", Name: "Ashish", City: "New Delhi", Zipcode: "110011", DateofBirth: "2000-01-01", Status: "1"},
+		{Id: "1002", Name: "Rob", City: "New Delhi", Zipcode: "110011", DateofBirth: "2000-01-01", Status: "1"},
 	}
 	mockService.EXPECT().GetAllCustomer("").Return(dummyCustomers, nil)
 	request, _ := http.NewRequest(http.MethodGet, "/customers", nil)

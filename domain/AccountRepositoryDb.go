@@ -1,6 +1,7 @@
 package domain
 
 import (
+	"log"
 	"strconv"
 
 	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
@@ -54,14 +55,20 @@ func (d AccountRepositoryDb) SaveTransaction(t Transaction) (*Transaction, *errs
 
 	// in case of error Rollback, and changes from both the tables will be reverted
 	if err != nil {
-		tx.Rollback()
+		err := tx.Rollback()
+		if err != nil {
+			log.Panic(err)
+		}
 		logger.Error("Error while saving transaction: " + err.Error())
 		return nil, errs.NewUnexpectedError("Unexpected database error")
 	}
 	// commit the transaction when all is good
 	err = tx.Commit()
 	if err != nil {
-		tx.Rollback()
+		err := tx.Rollback()
+		if err != nil {
+			log.Panic(err)
+		}
 		logger.Error("Error while commiting transaction for bank account: " + err.Error())
 		return nil, errs.NewUnexpectedError("Unexpected database error")
 	}
