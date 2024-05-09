@@ -1,6 +1,6 @@
-module github.com/ashishjuyal/banking
+module github.com/ibiscum/Building-Microservices-API-in-Go
 
-go 1.15
+go 1.22
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.0
