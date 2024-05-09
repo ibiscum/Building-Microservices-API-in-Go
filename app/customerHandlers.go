@@ -2,9 +2,10 @@ package app
 
 import (
 	"encoding/json"
-	"github.com/ashishjuyal/banking/service"
-	"github.com/gorilla/mux"
 	"net/http"
+
+	"github.com/gorilla/mux"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/service"
 )
 
 type CustomerHandlers struct {

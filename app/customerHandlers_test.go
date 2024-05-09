@@ -1,14 +1,15 @@
 package app
 
 import (
-	"github.com/ashishjuyal/banking/dto"
-	"github.com/ashishjuyal/banking-lib/errs"
-	"github.com/ashishjuyal/banking/mocks/service"
-	"github.com/golang/mock/gomock"
-	"github.com/gorilla/mux"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/golang/mock/gomock"
+	"github.com/gorilla/mux"
+	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/mocks/service"
 )
 
 var router *mux.Router

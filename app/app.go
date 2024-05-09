@@ -2,15 +2,16 @@ package app
 
 import (
 	"fmt"
-	"github.com/ashishjuyal/banking/domain"
-	"github.com/ashishjuyal/banking-lib/logger"
-	"github.com/ashishjuyal/banking/service"
-	"github.com/gorilla/mux"
-	"github.com/jmoiron/sqlx"
 	"log"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/gorilla/mux"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/domain"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/logger"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/service"
+	"github.com/jmoiron/sqlx"
 )
 
 func sanityCheck() {

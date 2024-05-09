@@ -1,10 +1,11 @@
 package domain
 
 import (
-	"github.com/ashishjuyal/banking-lib/errs"
-	"github.com/ashishjuyal/banking-lib/logger"
-	"github.com/jmoiron/sqlx"
 	"strconv"
+
+	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/logger"
+	"github.com/jmoiron/sqlx"
 )
 
 type AccountRepositoryDb struct {
@@ -41,7 +42,7 @@ func (d AccountRepositoryDb) SaveTransaction(t Transaction) (*Transaction, *errs
 	}
 
 	// inserting bank account transaction
-	result, _ := tx.Exec(`INSERT INTO transactions (account_id, amount, transaction_type, transaction_date) 
+	result, _ := tx.Exec(`INSERT INTO transactions (account_id, amount, transaction_type, transaction_date)
 											values (?, ?, ?, ?)`, t.AccountId, t.Amount, t.TransactionType, t.TransactionDate)
 
 	// updating account balance

@@ -2,9 +2,10 @@ package domain
 
 import (
 	"database/sql"
-	"github.com/ashishjuyal/banking-lib/errs"
-	"github.com/ashishjuyal/banking-lib/logger"
+
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/logger"
 	"github.com/jmoiron/sqlx"
 )
 

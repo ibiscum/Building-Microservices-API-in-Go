@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"github.com/ashishjuyal/banking/dto"
-	"github.com/ashishjuyal/banking-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
 )
 
 type Customer struct {

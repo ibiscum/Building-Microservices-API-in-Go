@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ashishjuyal/banking/app"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/app"
 )
 
 func main() {

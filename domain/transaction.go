@@ -1,6 +1,6 @@
 package domain
 
-import "github.com/ashishjuyal/banking/dto"
+import "github.com/ibiscum/Building-Microservices-API-in-Go/dto"
 
 const WITHDRAWAL = "withdrawal"
 

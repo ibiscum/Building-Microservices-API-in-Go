@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"github.com/ashishjuyal/banking/dto"
-	"github.com/ashishjuyal/banking-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
 )
 
 const dbTSLayout = "2006-01-02 15:04:05"
@@ -20,7 +20,7 @@ func (a Account) ToNewAccountResponseDto() *dto.NewAccountResponse {
 	return &dto.NewAccountResponse{a.AccountId}
 }
 
-//go:generate mockgen -destination=../mocks/domain/mockAccountRepository.go -package=domain github.com/ashishjuyal/banking/domain AccountRepository
+//go:generate mockgen -destination=../mocks/domain/mockAccountRepository.go -package=domain github.com/ibiscum/Building-Microservices-API-in-Go/domain AccountRepository
 type AccountRepository interface {
 	Save(account Account) (*Account, *errs.AppError)
 	SaveTransaction(transaction Transaction) (*Transaction, *errs.AppError)
