@@ -3,7 +3,7 @@ package dto
 import (
 	"strings"
 
-	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
 )
 
 type NewAccountRequest struct {

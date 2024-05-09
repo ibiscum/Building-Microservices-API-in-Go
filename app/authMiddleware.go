@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/gorilla/mux"
-	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/domain"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
 )
 
 type AuthMiddleware struct {
@@ -28,7 +28,7 @@ func (a AuthMiddleware) authorizationHandler() func(http.Handler) http.Handler {
 				if isAuthorized {
 					next.ServeHTTP(w, r)
 				} else {
-					appError := errs.AppError{http.StatusForbidden, "Unauthorized"}
+					appError := errs.AppError{Code: http.StatusForbidden, Message: "Unauthorized"}
 					writeResponse(w, appError.Code, appError.AsMessage())
 				}
 			} else {

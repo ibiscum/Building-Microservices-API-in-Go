@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
 	realdomain "github.com/ibiscum/Building-Microservices-API-in-Go/domain"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
 )
 
 func Test_should_return_a_validation_error_response_when_the_request_is_not_validated(t *testing.T) {

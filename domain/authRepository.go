@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/logger"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/logger"
 )
 
 type AuthRepository interface {

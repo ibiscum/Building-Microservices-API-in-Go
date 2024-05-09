@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/ashishjuyal/banking-lib/errs"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/domain"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
 )
 
 //go:generate mockgen -destination=../mocks/service/mockCustomerService.go -package=service github.com/ibiscum/Building-Microservices-API-in-Go/service CustomerService

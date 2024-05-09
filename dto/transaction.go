@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
+import "github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
 
 const WITHDRAWAL = "withdrawal"
 const DEPOSIT = "deposit"

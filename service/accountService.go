@@ -5,6 +5,7 @@ import (
 
 	"github.com/ibiscum/Building-Microservices-API-in-Go/domain"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
 )
 
 const dbTSLayout = "2006-01-02 15:04:05"

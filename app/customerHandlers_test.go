@@ -7,9 +7,8 @@ import (
 
 	"github.com/golang/mock/gomock"
 	"github.com/gorilla/mux"
-	"github.com/ibiscum/Building-Microservices-API-in-Go-lib/errs"
 	"github.com/ibiscum/Building-Microservices-API-in-Go/dto"
-	"github.com/ibiscum/Building-Microservices-API-in-Go/mocks/service"
+	"github.com/ibiscum/Building-Microservices-API-in-Go/lib/errs"
 )
 
 var router *mux.Router
