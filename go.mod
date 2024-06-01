@@ -1,6 +1,6 @@
 module github.com/ibiscum/Building-Microservices-API-in-Go
 
-go 1.22
+go 1.22.1
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.2
@@ -13,5 +13,5 @@ require (
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
-	go.uber.org/multierr v1.10.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
 )
