@@ -1,6 +1,7 @@
 module github.com/ibiscum/Building-Microservices-API-in-Go
 
-go 1.22.1
+go 1.23
+
 toolchain go1.24.1
 
 require (
@@ -9,7 +10,7 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/jmoiron/sqlx v1.4.0
 	go.uber.org/mock v0.5.2
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.27.1
 )
 
 require (
